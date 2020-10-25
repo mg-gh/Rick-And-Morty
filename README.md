@@ -1,8 +1,17 @@
-# RickAndMorty
+# Rick And Morty
+
+This web app consumes the [RickAndMortyAPI](https://rickandmortyapi.com/).
+The app has the search function along with the pagination to better present Rick and Morty's characters.
+The app uses an internal cache to prevent to perform too many REST calls.
+
+## Ideas
+
+For the episodes, we could cache each independent call or retrieve all episodes and then filter them and assign them to each character it was featured in.
+The first option has been implemented.
+
+## Angular-CLI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-
-For the episodes, we can cache each indipendent call or retrieve all episodes and then filter them and assign them to each character it was featured in.
 
 ## Development server
 
