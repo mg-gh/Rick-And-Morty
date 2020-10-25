@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Constants } from 'src/app/enums/constants';
 import { Episode } from 'src/app/models/episode';
 
 @Component({
@@ -8,7 +9,7 @@ import { Episode } from 'src/app/models/episode';
 })
 export class AccordionComponent implements OnInit {
 
-  @Input() title: string;
+  @Input() title: Constants;
   @Input() episodes: Episode[];
   public isCollapsed = true;
 

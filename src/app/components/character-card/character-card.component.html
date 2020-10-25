@@ -2,17 +2,23 @@
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img [src]="character.image" class="card-img" alt="...">
+                <img [src]="character?.image" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">{{ character.name }}</h5>
-                    <p class="card-text">{{ character.status }} - {{ character.species }}</p>
-                    <p class="card-text">{{ character.type }} <span *ngIf="character.type">-</span>
-                        {{ character.gender }}</p>
-                    <p class="card-text">{{ character.origin.name }} <span *ngIf="character.origin.name">-</span>
-                        {{ character.location.name }}</p>
-                    <app-accordion [title]="ACCORDION_TITLE" [episodes]="episodes"></app-accordion>
+                    <h5 class="card-title">{{ character?.name }}</h5>
+                    <p class="card-text">{{ character?.status }} - {{ character?.species }}</p>
+                    <p class="card-text">{{ character?.type }} <span *ngIf="character?.type">-</span>
+                        {{ character?.gender }}</p>
+                    <p class="card-text">{{ ORIGIN_LABEL }}&#58;&nbsp;{{ character?.origin?.name }}
+                        <span
+                            *ngIf="origin?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ origin?.residents?.length }}</span>
+                    </p>
+                    <p class="card-text">{{ LAST_KNOWN_LOCATION_LABEL }}&#58;&nbsp;{{ character?.location?.name }}
+                        <span
+                            *ngIf="location?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ location?.residents?.length }}</span>
+                    </p>
+                    <app-accordion [title]="ACCORDION_TITLE_LABEL" [episodes]="episodes"></app-accordion>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import { Endpoints } from '../enums/endpoints';
 import { Observable } from 'rxjs';
 import { Request } from '../models/request';
 import { Episode } from '../models/episode';
+import { Location } from '../models/location';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,7 @@ export class CharacterService {
     return this.http.get<Episode>(url);
   }
 
-  // getlocationinformation
+  public getLocation(url: string): Observable<Location> {
+    return this.http.get<Location>(url);
+  }
 }
