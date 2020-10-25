@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CharacterCardWrapperComponent } from './components/character-card-wrapper/character-card-wrapper.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { CharacterInfoComponent } from './components/character-info/character-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterCardComponent,
     CharacterCardWrapperComponent,
-    AccordionComponent
+    AccordionComponent,
+    CharacterInfoComponent
   ],
   imports: [
     BrowserModule,

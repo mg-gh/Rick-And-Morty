@@ -14,9 +14,6 @@ export class CharacterCardComponent implements OnInit, OnChanges {
 
   @Input() character: Character;
   private _ACCORDION_TITLE_LABEL = Constants.ACCORDION_TITLE_LABEL;
-  private _LAST_KNOWN_LOCATION_LABEL = Constants.LAST_KNOWN_LOCATION_LABEL;
-  private _NUMBER_OF_RESIDENTS_LABEL = Constants.NUMBER_OF_RESIDENTS_LABEL;
-  private _ORIGIN_LABEL = Constants.ORIGIN_LABEL;
   private _episodes = [];
   private _location: Location;
   private _origin: Location;
@@ -58,14 +55,5 @@ export class CharacterCardComponent implements OnInit, OnChanges {
   }
   public get ACCORDION_TITLE_LABEL(): Constants {
     return this._ACCORDION_TITLE_LABEL;
-  }
-  public get LAST_KNOWN_LOCATION_LABEL(): Constants {
-    return this._LAST_KNOWN_LOCATION_LABEL;
-  }
-  public get NUMBER_OF_RESIDENTS_LABEL(): Constants {
-    return this._NUMBER_OF_RESIDENTS_LABEL;
-  }
-  public get ORIGIN_LABEL(): Constants {
-    return this._ORIGIN_LABEL;
   }
 }

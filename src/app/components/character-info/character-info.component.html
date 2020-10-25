@@ -1,0 +1,26 @@
+<div class="card transparent">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item transparent p-2">
+            <h3 class="card-title m-0">{{ character?.name }}</h3>
+        </li>
+        <li class="list-group-item transparent p-2">
+            <p class="card-text">{{ character?.status }} - {{ character?.species }}</p>
+        </li>
+        <li class="list-group-item transparent p-2">
+            <p class="card-text">{{ character?.type }} <span *ngIf="character?.type">-</span>
+                {{ character?.gender }}</p>
+        </li>
+        <li class="list-group-item transparent p-2">
+            <p class="card-text">{{ ORIGIN_LABEL }}&#58;&nbsp;{{ character?.origin?.name }}
+                <span
+                    *ngIf="origin?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ origin?.residents?.length }}</span>
+            </p>
+        </li>
+        <li class="list-group-item transparent p-2">
+            <p class="card-text">{{ LAST_KNOWN_LOCATION_LABEL }}&#58;&nbsp;{{ character?.location?.name }}
+                <span
+                    *ngIf="location?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ location?.residents?.length }}</span>
+            </p>
+        </li>
+    </ul>
+</div>

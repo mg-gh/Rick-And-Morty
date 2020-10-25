@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Endpoints } from '../enums/endpoints';
+import { Endpoints } from 'src/app/enums/endpoints';
 import { Observable } from 'rxjs';
-import { Request } from '../models/request';
-import { Episode } from '../models/episode';
-import { Location } from '../models/location';
+import { Request } from 'src/app/models/request';
+import { Episode } from 'src/app/models/episode';
+import { Location } from 'src/app/models/location';
 
 @Injectable({
   providedIn: 'root'

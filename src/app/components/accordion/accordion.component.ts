@@ -11,7 +11,7 @@ export class AccordionComponent implements OnInit {
 
   @Input() title: Constants;
   @Input() episodes: Episode[];
-  public isCollapsed = true;
+  public isCollapsed = false;
 
   constructor() { }
 
