@@ -1,0 +1,18 @@
+<div id="accordion">
+  <div class="card">
+    <button type="button" class="btn">
+      <h5 class="title" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample">
+        {{ title }}
+      </h5>
+    </button>
+
+    <div id="collapseExample" [ngbCollapse]="isCollapsed">
+      <div class="card">
+        <div class="card-body">
+          <span *ngFor="let episode of episodes; last as last">{{ episode.name }}<span *ngIf="!last">,&nbsp;</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
