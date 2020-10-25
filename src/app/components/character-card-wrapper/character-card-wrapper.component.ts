@@ -17,7 +17,6 @@ export class CharacterCardWrapperComponent implements OnInit {
 
   ngOnInit(): void {
     this.characterService.getAllCharacters().subscribe((request) => {
-      console.log(request); //TODO Remove
       this._pagination = request.info;
       this._characters = request.results;
     });
