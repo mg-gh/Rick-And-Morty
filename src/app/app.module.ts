@@ -9,6 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CharacterCardWrapperComponent } from './components/character-card-wrapper/character-card-wrapper.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { CharacterInfoComponent } from './components/character-info/character-info.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NoResultsFoundComponent } from './components/no-results-found/no-results-found.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,18 @@ import { CharacterInfoComponent } from './components/character-info/character-in
     CharacterCardComponent,
     CharacterCardWrapperComponent,
     AccordionComponent,
-    CharacterInfoComponent
+    CharacterInfoComponent,
+    SearchBarComponent,
+    NoResultsFoundComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

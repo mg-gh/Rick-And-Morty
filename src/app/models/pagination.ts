@@ -1,6 +1,6 @@
 export interface Pagination {
     count: number;
-    next: URL;
+    next: string;
     pages: number;
-    prev: URL;
+    prev: string;
 }

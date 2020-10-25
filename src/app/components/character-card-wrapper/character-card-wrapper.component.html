@@ -1,5 +1,10 @@
+<app-search-bar [title]="APP_TITLE" (emitter)="searchCharacter($event)"></app-search-bar>
 <ng-container *ngIf="characters">
     <ng-container *ngFor="let character of characters">
         <app-character-card [character]="character"></app-character-card>
     </ng-container>
 </ng-container>
+<ng-container *ngIf="!characters && showResultsNotFound">
+    <app-no-results-found></app-no-results-found>
+</ng-container>
+<app-pagination class="d-flex justify-content-center" [page]="pageNumber" [collectionSize]="pagination?.count" (pageChange)="pageChange($event)"></app-pagination>
