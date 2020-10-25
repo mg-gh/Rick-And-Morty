@@ -13,11 +13,19 @@
         <li class="list-group-item transparent p-2">
             <p class="card-text">{{ ORIGIN_LABEL }}&#58;&nbsp;{{ character?.origin?.name }}
                 <span
+                    *ngIf="origin?.type">&nbsp;&#40;{{ origin?.type }}&#41;&nbsp;</span>
+                <span
+                    *ngIf="origin?.dimension">&nbsp;&#40;{{ origin?.dimension }}&#41;&nbsp;</span>
+                <span
                     *ngIf="origin?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ origin?.residents?.length }}</span>
             </p>
         </li>
         <li class="list-group-item transparent p-2">
             <p class="card-text">{{ LAST_KNOWN_LOCATION_LABEL }}&#58;&nbsp;{{ character?.location?.name }}
+                <span
+                    *ngIf="origin?.type">&nbsp;&#40;{{ location?.type }}&#41;&nbsp;</span>
+                <span
+                    *ngIf="origin?.dimension">&nbsp;&#40;{{ location?.dimension }}&#41;&nbsp;</span>
                 <span
                     *ngIf="location?.residents">&#45;&nbsp;{{ NUMBER_OF_RESIDENTS_LABEL }}&#58;&nbsp;{{ location?.residents?.length }}</span>
             </p>
